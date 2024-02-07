@@ -1,6 +1,7 @@
 def tetration(a, b):
-    """Computes a^^b."""
-    return eval(f'{a}' + f' ** {a}' * (b - 1))
+    """Computes a^^b recursively."""
+    if (b == 1) return a
+    return a ** tetration(a, b - 1)
 
 
 if __name__ == '__main__':
